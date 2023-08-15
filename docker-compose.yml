@@ -1,0 +1,30 @@
+services:
+  movies:
+    image: stayfocus06/moviesservice:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+
+ train:
+   image: stayfocus06/trainservice:latest
+   ports:
+     - "81:80"
+   deploy:
+     replicas: 3
+
+ dth:
+   image: stayfocus06/dthservice:latest
+   ports:
+     - "82:80"
+   deploy:
+     replicas: 3
+
+
+ recharge:
+   image: stayfocus06/rechargeservice:latest
+   ports:
+     - "83:80"
+   deploy:
+     replicas: 3
